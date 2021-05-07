@@ -34,7 +34,6 @@ class ToolTip(object):
 def CreateToolTip(widget, text):
     toolTip = ToolTip(widget)
     def enter(event):
-        time.sleep(1)
         toolTip.showtip(text)
     def leave(event):
         toolTip.hidetip()

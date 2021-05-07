@@ -1,5 +1,4 @@
 import turtle
-import time
 import numpy as np
 import patch_turtle_image
 import tkinter as tk
@@ -299,7 +298,7 @@ class App:
             if self.activeTurtleIndex > 67:
                 self.activeTurtleIndex = 0
             self.turtles[self.activeTurtleIndex].color("red")
-            self.turtles[self.activeTurtleIndex].turtlesize(0.3, 0.3, 0.3)
+            self.turtles[self.activeTurtleIndex].turtlesize(0.15, 0.15, 0.15)
 
             self.turtles[self.activeTurtleIndex - 1].color("green")
             self.turtles[self.activeTurtleIndex -
@@ -316,7 +315,7 @@ class App:
             if self.activeTurtleIndex < 0:
                 self.activeTurtleIndex = 67
             self.turtles[self.activeTurtleIndex].color("red")
-            self.turtles[self.activeTurtleIndex].turtlesize(0.3, 0.3, 0.3)
+            self.turtles[self.activeTurtleIndex].turtlesize(0.15, 0.15, 0.15)
 
             self.turtles[0 if self.activeTurtleIndex ==
                          67 else self.activeTurtleIndex + 1].color("green")
@@ -379,7 +378,6 @@ class App:
                     contenido + str(int(i.xcor())) + " " +
                     str(abs(int(i.ycor() - 480))) + "\n"
                 )
-                print(str(i.xcor()))
 
             fin = "}"
             archivo = open(self.filePath, "w")
@@ -437,7 +435,7 @@ class App:
             self.turtleScreen.tracer(True)
 
             self.turtles[self.activeTurtleIndex].color("red")
-            self.turtles[self.activeTurtleIndex].turtlesize(0.3, 0.3, 0.3)
+            self.turtles[self.activeTurtleIndex].turtlesize(0.15, 0.15, 0.15)
             self.lblStatus.config(text="Punto " + str(self.activeTurtleIndex + 1) + " - (" + str(
                 self.turtles[self.activeTurtleIndex].xcor()) + ", " + str(self.turtles[self.activeTurtleIndex].ycor()) + ")", bg="lightblue")
         except:
